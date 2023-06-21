@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3D Object</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Submission
+        </h1>
+        <h2>
+           The Darce choke
+        </h2>
+        
+
+    </header>
+    <p>
+     The Darce choke is a particularly tight form of an arm triangle. It is often used as a counter 
+     when your opponent escapes from side control by getting back to their knees. An effective way 
+     to finish it is to hook your opponent's legs with your own. 
+    </p>
+    <!-- Main Container -->
+    <div id="container">
+    
+    
+
+        <!-- An aside -->
+        <!-- This is for holding the 3D object -->
+        <div id="aSide">
+
+            <!-- 3D objsect -->
+            <!-- This inserts the 3D object inside the aside container -->
+            <model-viewer src="assets/darce.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/barriers_to_takedown">
+            </model-viewer>
+        </div>
+    </div>
+    <p> If you liked this move, you may also like: </p>
+
+    <script type = "text/javascript">
+        let moves = `[
+        {
+            "name" : "arm_in_guillotine",
+            "type_of_submission" : "choke", 
+            "arm_or_leg" : null,
+            "straight_or_twisting" : null
+        }, 
+        {
+            "name" : "arm_triangle",
+            "type_of_submission" : "choke", 
+            "arm_or_leg" : null,
+            "straight_or_twisting" : null
+        }, 
+        {
+            "name" : "armbar",
+            "type_of_submission" : "joint_lock", 
+            "arm_or_leg" : "arm",
+            "straight_or_twisting" : "straight"
+        }, 
+        {
+            "name" : "darce",
+            "type_of_submission" : "choke", 
+            "arm_or_leg" : null,
+            "straight_or_twisting" : null
+        }, 
+        {
+            "name" : "guillotine",
+            "type_of_submission" : "choke", 
+            "arm_or_leg" : null,
+            "straight_or_twisting" : null
+        }, 
+        {
+            "name" : "inside_heel_hook",
+            "type_of_submission" : "joint_lock", 
+            "arm_or_leg" : "leg",
+            "straight_or_twisting" : "twisting"
+        }, 
+        {
+            "name" : "kimura",
+            "type_of_submission" : "joint_lock", 
+            "arm_or_leg" : "arm",
+            "straight_or_twisting" : "twisting"
+        }, 
+        {
+            "name" : "outside_heel_hook",
+            "type_of_submission" : "joint_lock", 
+            "arm_or_leg" : "leg",
+            "straight_or_twisting" : "twisting"
+        }, 
+        {
+            "name" : "rear_naked_choke",
+            "type_of_submission" : "choke", 
+            "arm_or_leg" : null,
+            "straight_or_twisting" : null
+        }, 
+        {
+            "name" : "rear_triangle",
+            "type_of_submission" : "choke", 
+            "arm_or_leg" : null,
+            "straight_or_twisting" : null
+        }
+    ]`
+    console.log(JSON.parse(moves))
+    var aig = (JSON.parse(moves)[0].name)
+    console.log(aig)
+    console.log(loc)
+    
+    for (let i = 0; i<10; i++){
+        var type = JSON.parse(moves)[i].type_of_submission
+        if (type == "choke"){
+            var aig = (JSON.parse(moves)[i].name)
+            var loc = aig+".html"
+            document.write('<p><a href="' + loc + '">'+ aig + '</a><p>')
+            
+        }
+        
+    }
+
+    </script>
+</body>
+
+</html>
