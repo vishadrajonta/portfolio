@@ -32,8 +32,9 @@ header{
 }
 
 #aSide {
-    height: 800px;
-    width: 800px;
+    text-align: center;
+    height: 500px;
+    width: 500px;
     top: calc(20% - 250px);
     right: 35%;
 }
@@ -46,5 +47,5 @@ header{
     width: 600px;
     top: 0;
     left: 0;
-    border: none;
+    border: 1px solid black;
 }
