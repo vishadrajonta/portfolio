@@ -1,0 +1,50 @@
+body{
+	background-color: #F5F5F5;
+	font-family: Georgia, serif;
+	margin: 30px;
+}
+
+
+header{
+	padding-left: 30px;
+	padding-right: 30px;
+	border: 1px solid black;
+	margin: 30px;
+}
+
+
+.samples {
+	border: 1px solid black;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	padding-top:30px;
+	margin:30px;
+	text-align: left;
+}
+
+.pdfs{
+	display: inline; 
+	width: 50%;
+	height: 400px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+#aSide {
+    height: 800px;
+    width: 800px;
+    top: calc(20% - 250px);
+    right: 35%;
+}
+
+
+/* This styles the 3D object inserted in the aside container */
+
+#aSide model-viewer {
+    height: 600px;
+    width: 600px;
+    top: 0;
+    left: 0;
+    border: none;
+}
